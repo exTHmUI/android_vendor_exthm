@@ -5,8 +5,8 @@
 #
 
 # Version
-EXTHM_NUM_VERSION := 13.0
-EXTHM_BRANCH := Tenshi
+EXTHM_NUM_VERSION := 14.0
+EXTHM_BRANCH := Utsuho
 EXTHM_BUILD_TYPE := DEBUG
 EXTHM_DATE := $(shell date -u +%Y%m%d)
 EXTHM_DEVICE := $(shell echo "$(TARGET_PRODUCT)" | cut -d '_' -f 2,3)
