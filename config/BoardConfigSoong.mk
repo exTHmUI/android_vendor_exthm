@@ -28,6 +28,8 @@ $(foreach v,$(EXPORT_TO_SOONG),$(eval $(call addVar,$(v))))
 
 SOONG_CONFIG_NAMESPACES += exthmGlobalVars
 SOONG_CONFIG_exthmGlobalVars += \
+    qti_vibrator_effect_lib \
+    qti_vibrator_use_effect_stream \
     additional_gralloc_10_usage_bits \
     gralloc_handle_has_custom_content_md_reserved_size \
     gralloc_handle_has_reserved_size \
@@ -52,6 +54,7 @@ endif
 SOONG_CONFIG_exthmGlobalVars_gralloc_handle_has_custom_content_md_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE)
 SOONG_CONFIG_exthmGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE)
 SOONG_CONFIG_exthmGlobalVars_uses_egl_display_array := $(TARGET_USES_EGL_DISPLAY_ARRAY)
+SOONG_CONFIG_exthmQcomVars_qti_vibrator_use_effect_stream := $(TARGET_QTI_VIBRATOR_USE_EFFECT_STREAM)
 SOONG_CONFIG_exthmQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
 SOONG_CONFIG_exthmQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
 
@@ -60,6 +63,7 @@ TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE ?= false
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE ?= false
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
 TARGET_INIT_VENDOR_LIB ?= vendor_init
+TARGET_QTI_VIBRATOR_EFFECT_LIB ?= libqtivibratoreffect
 TARGET_SURFACEFLINGER_UDFPS_LIB ?= surfaceflinger_udfps_lib
 
 # Soong value variables
@@ -73,6 +77,7 @@ SOONG_CONFIG_exthmQcomVars_qcom_display_headers_namespace := vendor/qcom/opensou
 else
 SOONG_CONFIG_exthmQcomVars_qcom_display_headers_namespace := $(QCOM_SOONG_NAMESPACE)/display
 endif
+SOONG_CONFIG_exthmQcomVars_qti_vibrator_effect_lib := $(TARGET_QTI_VIBRATOR_EFFECT_LIB)
 
 PRODUCT_SOONG_NAMESPACES += packages/apps/Bluetooth
 
