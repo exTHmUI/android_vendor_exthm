@@ -28,8 +28,6 @@ $(foreach v,$(EXPORT_TO_SOONG),$(eval $(call addVar,$(v))))
 
 SOONG_CONFIG_NAMESPACES += exthmGlobalVars
 SOONG_CONFIG_exthmGlobalVars += \
-    qti_vibrator_effect_lib \
-    qti_vibrator_use_effect_stream \
     additional_gralloc_10_usage_bits \
     bootloader_message_offset \
     gralloc_handle_has_custom_content_md_reserved_size \
@@ -55,6 +53,8 @@ SOONG_CONFIG_exthmNvidiaVars += \
 
 SOONG_CONFIG_NAMESPACES += exthmQcomVars
 SOONG_CONFIG_exthmQcomVars += \
+    qti_vibrator_effect_lib \
+    qti_vibrator_use_effect_stream \
     supports_extended_compress_format \
     uses_pre_uplink_features_netmgrd
 
